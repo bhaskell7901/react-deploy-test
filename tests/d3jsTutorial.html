@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First D3 Cirlce</title>
+    <script src="https://d3js.org/d3.v4.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .svg-container {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                padding-bottom: 100%;
+                vertical-align: top;
+                overflow: hidden;
+                border: 3px solid black;
+            }
+            .svg-content {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: 3px solid yellow;
+            }
+    </style>
+  </head>
+  <body>
+    <div class="svg-container">
+        <svg class="svg-content" viewBox="0 0 300 300" preserveAspectRatio="xMinYMin meet"></svg>
+    </div>
+    <script type="text/javascript">
+        var svg = d3.select("svg");
+
+        svg.append("circle")
+            .attr("cx", 50)
+            .attr("cy", 50)
+            .attr("r", 40)
+            .attr("fill", "purple");
+
+        var scale = d3.scaleLinear()
+            .domain([0, 300])
+            .range([0, 300]);
+
+        var yAxis = d3.axisRight().
+            scale(scale);
+        
+        var xAxis = d3.axisBottom().
+            scale(scale);
+
+        svg.append("g")
+            .attr("transform", "translate(0 , 0)")
+            .call(yAxis);
+        
+        svg.append("g")
+            .attr("transform", "translate(0 , 0)")
+            .call(xAxis);
+    </script>
+  </body>
+</html>

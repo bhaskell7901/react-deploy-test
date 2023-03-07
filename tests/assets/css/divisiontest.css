@@ -1,0 +1,30 @@
+.division-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.division-flex {
+    width: 100%;
+    text-align: center;
+}
+
+.office-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.office-flex {
+    width: 50%
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    width: 25%
+    text-align: center;
+}

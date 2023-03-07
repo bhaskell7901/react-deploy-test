@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Testing</title>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Flex Testing</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Nav1-link</a></li>
+                <li><a href="#">Nav2-link</a></li>
+                <li><a href="#">Nav2-link</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Change Anchor Hover Behavior</h2>
+                <p>Change anchor tag hover style like this.</p>
+                <pre>
+a:hover {
+
+    text-decoration-line: underline;
+
+}
+                </pre>
+            </section>
+            <section>
+                <h2>Add Bullet Points to Headers</h2>
+                <p>Add custom bullet points to headers using the <em>before</em> pseudo class.</p>
+                <pre>
+h2:before {
+
+    content: '\273A';
+
+}
+                </pre>
+            </section>
+            <section>
+                <h2>Only Select Headers With Section Parents</h2>
+                <p>Select only h2 headers whose parents are a section element.</p>
+                <pre>
+section > h2 {
+
+    size: 22px;
+    color: grey;
+
+}
+                </pre>
+            </section>
+            <section>
+                <h2>Add a Color Gradient</h2>
+                <p>Add a color gradient to any selector.  You can add more than one color.</p>
+                <pre>
+h2 {
+
+    color: linear-gradient(red, yellow);
+
+}
+                </pre>
+            </section>
+            <section>
+                <h2>Modify First Letters of Paragraphs</h2>
+                <p>Make the fist letter of every paragraph large and a different color</p>
+                <pre>
+p::first-letter {
+
+    color: grey;
+    text-transform: uppercase;
+    size: 36px;
+
+}
+                </pre>
+            </section>
+            <section>
+                <h2>Do Something At Window Size X</h2>
+                <p>Enable special formating when the window size is at at defined size</p>
+                <pre>
+@media screen and (max-width: 768px) {
+
+    header, main {
+
+        flex-direction: column;
+        padding-right: 0;
+
+    }
+
+}
+                </pre>
+            </section>
+        </article>
+    </main>
+    <footer>
+        By &#x2764 Designs.
+    </footer>
+    <script src="./assets/Javascript/scripts.js"></script>
+</body>
